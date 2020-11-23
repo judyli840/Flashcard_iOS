@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:Flashcards.xcodeproj">
+      location = "self:Flashcard2.xcodeproj">
    </FileRef>
 </Workspace>

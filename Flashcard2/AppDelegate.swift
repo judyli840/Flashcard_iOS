@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Flashcards
+//  Flashcard2
 //
-//  Created by Judy Li on 11/20/20.
+//  Created by Judy Li on 11/22/20.
 //  Copyright © 2020 Judy Li. All rights reserved.
 //
 
