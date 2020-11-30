@@ -15,6 +15,8 @@
 		8B0A5B1B256B902600DFB02F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B0A5B19256B902600DFB02F /* LaunchScreen.storyboard */; };
 		8B0A5B26256B902600DFB02F /* Flashcard2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A5B25256B902600DFB02F /* Flashcard2Tests.swift */; };
 		8B0A5B31256B902600DFB02F /* Flashcard2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B0A5B30256B902600DFB02F /* Flashcard2UITests.swift */; };
+		8BE1C7FF2574D3F900DD3B7E /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1C7FE2574D3F900DD3B7E /* CustomTableViewCell.swift */; };
+		8BE1C8012574D56D00DD3B7E /* FlashcardDeck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BE1C8002574D56D00DD3B7E /* FlashcardDeck.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		8B0A5B2C256B902600DFB02F /* Flashcard2UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Flashcard2UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B0A5B30256B902600DFB02F /* Flashcard2UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Flashcard2UITests.swift; sourceTree = "<group>"; };
 		8B0A5B32256B902600DFB02F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BE1C7FE2574D3F900DD3B7E /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		8BE1C8002574D56D00DD3B7E /* FlashcardDeck.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlashcardDeck.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				8B0A5B17256B902600DFB02F /* Assets.xcassets */,
 				8B0A5B19256B902600DFB02F /* LaunchScreen.storyboard */,
 				8B0A5B1C256B902600DFB02F /* Info.plist */,
+				8BE1C7FE2574D3F900DD3B7E /* CustomTableViewCell.swift */,
+				8BE1C8002574D56D00DD3B7E /* FlashcardDeck.swift */,
 			);
 			path = Flashcard2;
 			sourceTree = "<group>";
@@ -261,7 +267,9 @@
 			files = (
 				8B0A5B13256B902600DFB02F /* ViewController.swift in Sources */,
 				8B0A5B0F256B902600DFB02F /* AppDelegate.swift in Sources */,
+				8BE1C7FF2574D3F900DD3B7E /* CustomTableViewCell.swift in Sources */,
 				8B0A5B11256B902600DFB02F /* SceneDelegate.swift in Sources */,
+				8BE1C8012574D56D00DD3B7E /* FlashcardDeck.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

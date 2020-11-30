@@ -9,12 +9,23 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    private var flashcardDecks: [FlashcardDeck]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        flashcardDecks = [FlashcardDeck.init(4, "Spanish"), FlashcardDeck.init(2, "Database"), FlashcardDeck.init(3, "Japanese")]
     }
+    
+    //MARK: UITableViewDataSource
 
-
+    @IBAction func btnAlex(_ sender: Any) {
+        self.performSegue(withIdentifier: "FlashcardSetPage", sender: sender)
+    }
+    
+    @IBAction func btnJudy(_ sender: Any) {
+        self.performSegue(withIdentifier: "FlashcardSetPage", sender: sender)
+    }
+    
 }
 
