@@ -9,7 +9,7 @@
 import UIKit
 
 class CustomTableViewCell: UITableViewCell {
-    @IBOutlet weak var lblTitle: UIView!
+    @IBOutlet weak var lblTitle: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
