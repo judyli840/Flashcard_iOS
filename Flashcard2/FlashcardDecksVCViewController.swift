@@ -23,6 +23,26 @@ class FlashcardDecksVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         ]
     }
     
+    @IBAction func btnAddDeck(_ sender: Any) {
+        let alert: UIAlertController = UIAlertController.init(title: "Add Deck", message: "Please enter deck name", preferredStyle: .alert)
+        
+        let cancelAction: UIAlertAction = UIAlertAction.init(title: "Cancel", style: .cancel) { (action) in
+        }
+        
+        let okAction: UIAlertAction = UIAlertAction.init(title: "Submit", style: .default) { (action) in
+            
+            let newFlashCardDeck = FlashcardDeck.init(deckID:self.flashcardDecks.count, deckName: alert.textFields?.first?.text ?? "")
+            self.flashcardDecks.append(newFlashCardDeck)
+            self.tableView.reloadData()
+        }
+        
+        alert.addAction(cancelAction)
+        alert.addAction(okAction)
+        alert.addTextField(configurationHandler: nil);
+        
+        self.present(alert, animated: true, completion: nil)
+    }
+    
     //MARK: CustomTableViewCellDelegate
     
     func deleteRow(atIndex index: IndexPath) {
