@@ -8,8 +8,15 @@
 
 import UIKit
 
+protocol CustomTableViewCellDelegate: NSObject {
+    func deleteRow(atIndex index:IndexPath)
+}
+
 class CustomTableViewCell: UITableViewCell {
     @IBOutlet weak var lblTitle: UILabel!
+    var indexPath: IndexPath!
+    
+    weak var delegate: CustomTableViewCellDelegate!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,4 +29,7 @@ class CustomTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func btnDeletePressed(_ sender: Any) {
+        self.delegate?.deleteRow(atIndex: self.indexPath)
+    }
 }

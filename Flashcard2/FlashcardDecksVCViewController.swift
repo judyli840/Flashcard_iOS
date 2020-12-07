@@ -8,7 +8,9 @@
 
 import UIKit
 
-class FlashcardDecksVC: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class FlashcardDecksVC: UIViewController, UITableViewDelegate, UITableViewDataSource, CustomTableViewCellDelegate {
+
+    @IBOutlet weak var tableView: UITableView!
     private var flashcardDecks: [FlashcardDeck]!
     
     override func viewDidLoad() {
@@ -21,9 +23,15 @@ class FlashcardDecksVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         ]
     }
     
+    //MARK: CustomTableViewCellDelegate
+    
+    func deleteRow(atIndex index: IndexPath) {
+        self.flashcardDecks.remove(at: index.row)
+        self.tableView.reloadData()
+    }
+    
     //MARK: UITableViewDataSource
     
-    // func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return flashcardDecks.count
     }
@@ -32,10 +40,9 @@ class FlashcardDecksVC: UIViewController, UITableViewDelegate, UITableViewDataSo
         let cell: CustomTableViewCell = tableView.dequeueReusableCell(withIdentifier: "Custom Cell") as! CustomTableViewCell
         
         cell.lblTitle.text = flashcardDecks[indexPath.row].deckName
+        cell.indexPath  = indexPath
+        cell.delegate = self
         
         return cell
     }
-
-  
-
 }
